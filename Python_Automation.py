@@ -433,9 +433,9 @@ def Linux():
 os.system("tput setaf 3")
 print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\n\t\t\t\t\tWELCOME\n\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
 
-os.system('espeak-ng "welcome i am grafitti i am especially programmed to perform AWS , Docker ,Linux ,Hadoop , Ansible task" -s 140')
+os.system('espeak-ng "welcome i am grafitti i am especially programmed to perform AWS , Docker ,Linux task" -s 140')
 
-Technology = ["AWS","Docker","Linux","Hadoop","Exit"]
+Technology = ["AWS","Docker","Linux","Exit"]
 os.system("tput setaf 4")
 for j in range(0,5):
 	print("\t\t\t\t",j+1,". ",Technology[j])
@@ -445,8 +445,8 @@ for j in range(0,5):
 		os.system("espeak-ng 'press 2 for Docker' -s 150")
 	elif j==2:
 		os.system("espeak-ng 'press 3 for Linux' -s 150")
-	elif j==3:
-		os.system("espeak-ng 'press 4 for Hadoop' -s 150")
+	#elif j==3:
+		#os.system("espeak-ng 'press 4 for Hadoop' -s 150")
 	else:
 		os.system("espeak-ng 'press 5 to exit'")
 
@@ -456,12 +456,12 @@ while True:
 	select_tech=int(input("Enter Your Technology : "))
 	if select_tech == 1:
 		AWS()
-	if select_tech == 1:
+	elif select_tech == 2:
 		Docker()
-	if select_tech == 1:
+	elif select_tech == 3:
 		Linux()
-	if select_tech == 1:
-		Hadoop()
+	#elif select_tech == 4:
+		#Hadoop()
 	else:
 		break
 	
