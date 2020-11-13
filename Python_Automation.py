@@ -437,7 +437,7 @@ os.system('espeak-ng "welcome i am grafitti i am especially programmed to perfor
 
 Technology = ["AWS","Docker","Linux","Exit"]
 os.system("tput setaf 4")
-for j in range(0,5):
+for j in range(0,4):
 	print("\t\t\t\t",j+1,". ",Technology[j])
 	if j==0:
 		os.system("espeak-ng 'press 1 For AWS' -s 150")
@@ -448,7 +448,7 @@ for j in range(0,5):
 	#elif j==3:
 		#os.system("espeak-ng 'press 4 for Hadoop' -s 150")
 	else:
-		os.system("espeak-ng 'press 5 to exit'")
+		os.system("espeak-ng 'press 4 to exit'")
 
 while True:
 	os.system("tput setaf 6")
