@@ -428,16 +428,48 @@ def Linux():
 	menu()
 
 
+def Hadoop():
+	import os
+
+	os.system("tput setaf 3")
+	print("\t\t\t welcome to my hadoop!")
+	os.system("tput setaf 7")
+	print("\t\t\t.....")
+	print("""
+		\n
+		press1:to know hadoop storage list
+		press2:to start the hadoop cluster
+		press3:to know how me datenodes connected
+		press4:to enter the safemode
+		press5:to leave the safemode
+		press6:to stop the cluster
+		""")
+	ch=input("enter your choice from above:")
+	print(ch)
+	if int(ch)==1:
+	    os.system("hadoop fs -ls/")
+	elif int(ch)==2:
+	    os.system("hadoop-daemon.sh start namenode")
+	elif int(ch)==3:
+	    os.system("hadoop dfsadmin -report")
+	elif int(ch)==4:
+	    os.system("hadoop dfsadmin -safemode get")
+	elif int(ch)==5:
+	    os.system("hadoop dfsadmin -safemode leave")
+	elif int(ch)==6:
+	    os.system("hadoop-daemon.sh stop namenode")
+	else:
+	   print( "error")
 
 
 os.system("tput setaf 3")
 print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\n\t\t\t\t\tWELCOME\n\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
 
-os.system('espeak-ng "welcome i am grafitti i am especially programmed to perform AWS , Docker ,Linux task" -s 140')
+os.system('espeak-ng "welcome i am grafitti i am especially programmed to perform AWS , Docker ,Linux , Hadoop task" -s 140')
 
-Technology = ["AWS","Docker","Linux","Exit"]
+Technology = ["AWS","Docker","Linux","Hadoop","Exit"]
 os.system("tput setaf 4")
-for j in range(0,4):
+for j in range(0,5):
 	print("\t\t\t\t",j+1,". ",Technology[j])
 	if j==0:
 		os.system("espeak-ng 'press 1 For AWS' -s 150")
@@ -445,10 +477,10 @@ for j in range(0,4):
 		os.system("espeak-ng 'press 2 for Docker' -s 150")
 	elif j==2:
 		os.system("espeak-ng 'press 3 for Linux' -s 150")
-	#elif j==3:
-		#os.system("espeak-ng 'press 4 for Hadoop' -s 150")
+	elif j==3:
+		os.system("espeak-ng 'press 4 for Hadoop' -s 150")
 	else:
-		os.system("espeak-ng 'press 4 to exit'")
+		os.system("espeak-ng 'press 5 to exit'")
 
 while True:
 	os.system("tput setaf 6")
@@ -460,10 +492,9 @@ while True:
 		Docker()
 	elif select_tech == 3:
 		Linux()
-	#elif select_tech == 4:
-		#Hadoop()
+	elif select_tech == 4:
+		Hadoop()
 	else:
 		break
 	
-
 
